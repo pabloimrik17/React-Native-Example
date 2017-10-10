@@ -2,14 +2,13 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import Bananas from "./components/bananas";
 import LotsOfGreetings from "./components/greetings";
+import Blink from "./components/blink";
 
 export default class HelloWorldApp extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-          <Text>Hello World!</Text>
-          <Bananas></Bananas>
-          <LotsOfGreetings></LotsOfGreetings>
+          <Blink text='Holi'/>
       </View>
     );
   }
