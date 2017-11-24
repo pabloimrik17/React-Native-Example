@@ -1,20 +1,24 @@
 import React, { Component } from 'react';
 import { AppRegistry, Text, View } from 'react-native';
 
-class Blink extends Componet {
-  constructor(props) {
-    super(props);
-    this.state = { showText: true };
+class Blink extends Component {
+    constructor(props) {
+        super(props);
 
-    setInterval(() => {
-      this.setState(previousState => ({ showText: !previousState.showText }));
-    }, 1000);
-  }
+        this.state = {showText: true};
 
-  render() {
-    const display = this.state.showText ? this.props.text : ' ';
-    return (
-      <Text>{display}</Text>
-    );
-  }
+        setInterval(() => {
+            this.setState(previusState => {
+                return { showText: !previusState.showText };
+            });
+        }, 1000);
+    }
+
+    render() {
+        let display = this.state.showText ? this.props.text : ' ';
+
+        return (
+            <Text>{display}</Text>
+        );
+    }
 }
